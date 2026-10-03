@@ -1,85 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Arul Kumar Natarajan - Academic Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Arul Kumar Natarajan | Professor of Cybersecurity</title>
+  <meta name="description" content="Dr. Arul Kumar Natarajan, Professor and Program Head (Cybersecurity), Samarkand International University of Technology, Uzbekistan. Research in cybersecurity, AI for cybersecurity, and generative AI security.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#home" class="brand">Dr. Arul Kumar <span>Natarajan</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#patents">Patents &amp; Copyrights</a></li>
+      <li><a href="#awards">Awards &amp; Service</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HOME ================= -->
+  <section id="home" class="page">
+    <div class="hero">
+      <div>
+        <img class="photo" src="profile.jpg" alt="Dr. Arul Kumar Natarajan"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="photo-fallback">AK</div>
+      </div>
+      <div>
         <h1>Dr. Arul Kumar Natarajan</h1>
-        <h2>Assistant Professor | AI, Cybersecurity & Data Science</h2>
-        <p>Samarkand International University of Technology, Uzbekistan</p>
-        <p>Email: <a href="mailto:itsprofarul@gmail.com">itsprofarul@gmail.com</a> | <a href="mailto:arul.natarajan@siut.uz">arul.natarajan@siut.uz</a></p>
-        <p>Website: <a href="https://sites.google.com/view/itsprofarul" target="_blank">Personal Website</a></p>
-    </header>
+        <p class="role">Professor &amp; Program Head (Cybersecurity)</p>
+        <p class="org">School of Computing, Samarkand International University of Technology (SIUT), Uzbekistan</p>
+        <div class="btns">
+          <a class="btn primary" href="#publications">View Publications</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=ejaQJu4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="https://www.scopus.com/authid/detail.uri?authorId=55602548600" target="_blank" rel="noopener">Scopus</a>
+          <a class="btn" href="https://orcid.org/0000-0002-9728-477X" target="_blank" rel="noopener">ORCID</a>
+        </div>
+      </div>
+    </div>
 
-    <section id="awards">
-        <h2>Best Paper Awards</h2>
-        <ul>
-            <li>
-                <strong>Deep Learning Enhanced Analysis of the Influence of Demographic, Socio-economic Factors, and Social Media Advertisements on Consumers' Online Shopping Behavior</strong><br>
-                Presented at the 2nd Doctoral Symposium on Human-Centered Computing (Human-2024), Kolkata Chapter and Sister Nivedita University, India, March 30, 2024.
-            </li>
-            <li>
-                <strong>Modeling Real-Time Traffic Flow Monitoring System Using Deep Learning and Unmanned Aerial Vehicles</strong><br>
-                Received the Best Paper Award from the Journal of Mobile Multimedia, River Publishers (Scopus Indexed), 2023.
-            </li>
+    <div class="stats">
+      <div class="stat"><b>73</b><span>Scopus-Indexed Documents</span></div>
+      <div class="stat"><b>735</b><span>Scopus Citations</span></div>
+      <div class="stat"><b>13</b><span>h-index (Scopus &amp; Scholar)</span></div>
+      <div class="stat"><b>18</b><span>Patents (India &amp; UK)</span></div>
+      <div class="stat"><b>10</b><span>Edited Books (Scopus)</span></div>
+      <div class="stat"><b>3</b><span>Authored Books</span></div>
+      <div class="stat"><b>911</b><span>Google Scholar Citations</span></div>
+      <div class="stat"><b>15+</b><span>Years of Experience</span></div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h2 class="section">About</h2>
+        <p><b>Dr. Arul Kumar Natarajan</b> is Professor and Program Head of Cybersecurity in the School of Computing at Samarkand International University of Technology (SIUT), Uzbekistan, where he has served since January 2024. He leads curriculum development, program delivery, and research mentorship for the cybersecurity program.</p>
+        <p>He earned his Ph.D. in Computer Science from Bharathidasan University, India, in 2017, and completed postdoctoral research at the Singapore Institute of Technology (2024–2025) on an ensemble framework for detecting URL-based phishing attacks using generative AI techniques.</p>
+        <p>With over 15 years of academic and research experience, he has served at CHRIST (Deemed to be University) and Bishop Heber College in India, and Debre Berhan University in Ethiopia. He has authored 73 Scopus-indexed scholarly works, written academic books with Springer Nature, edited 10 Scopus-indexed books, and holds 18 patents in India and the UK along with a registered copyright in India.</p>
+      </div>
+      <div>
+        <div class="card">
+          <h2 class="section">Research Areas</h2>
+          <div class="chips">
+            <span class="chip">Cybersecurity</span>
+            <span class="chip">AI for Cybersecurity</span>
+            <span class="chip">ML for Cyber Threat Detection</span>
+            <span class="chip">Network Security</span>
+            <span class="chip">Explainable AI</span>
+            <span class="chip">Generative AI Security</span>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="section">Latest</h2>
+          <div class="highlight"><b>Learning Kali Linux for Cybersecurity</b><small>New book on Amazon, September 2026</small></div>
+          <div class="highlight"><b>Secure Systems Design Award</b><small>ICCDM 2026, Universiti Putra Malaysia &amp; University of Delhi</small></div>
+          <div class="highlight"><b>Hands-On Computer Networks &amp; AI-Driven Cybersecurity</b><small>Springer Nature, March 2026</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="page">
+    <h1 class="page-title">Experience &amp; Education</h1>
+    <p class="page-sub">Academic positions, research, leadership roles, and qualifications.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <h2 class="section">Academic Positions</h2>
+        <ul class="timeline">
+          <li><div class="when">January 2024 – Present</div>
+            <div class="what">Professor &amp; Program Head (Cybersecurity)</div>
+            <div class="where">Samarkand International University of Technology, Uzbekistan</div>
+            <p>Leads curriculum development, program delivery, faculty coordination, and continuous improvement aligned with international standards, while teaching, mentoring students, and conducting cybersecurity and AI research.</p></li>
+          <li><div class="when">February 2024 – March 2025</div>
+            <div class="what">Postdoctoral Researcher, Cybersecurity &amp; Generative AI</div>
+            <div class="where">Singapore Institute of Technology, Singapore</div>
+            <p>Developed an ensemble framework for phishing URL detection using generative AI, applying GANs to model evolving phishing attack patterns.</p></li>
+          <li><div class="when">June 2019 – December 2023</div>
+            <div class="what">Assistant Professor &amp; Program Coordinator, M.Sc. Computational Statistics and AI</div>
+            <div class="where">CHRIST (Deemed to be University), India</div>
+            <p>Taught undergraduate and postgraduate courses in computing and data science; coordinated academic planning and program delivery; contributed to NAAC accreditation documentation.</p></li>
+          <li><div class="when">October 2017 – May 2019</div>
+            <div class="what">Assistant Professor, School of Computing</div>
+            <div class="where">Debre Berhan University, Ethiopia</div></li>
+          <li><div class="when">June 2010 – September 2017</div>
+            <div class="what">Assistant Professor, Computer Science</div>
+            <div class="where">Bishop Heber College, India</div></li>
         </ul>
-    </section>
+      </div>
 
-    <section id="books">
-        <h2>Books - Edited</h2>
-        <ul>
-            <li><strong>Advanced Applications of Python Data Structures and Algorithms</strong> (IGI Global, USA, 2023) - <a href="https://doi.org/10.4018/978-1-6684-7100-5">DOI</a></li>
-            <li><strong>Geospatial Application Development Using Python Programming</strong> (IGI Global, USA, 2024) - <a href="https://doi.org/10.4018/979-8-3693-1754-9">DOI</a></li>
-            <li><strong>Ethics, Machine Learning, and Python in Geospatial Analysis</strong> (IGI Global, USA, 2024) - <a href="https://doi.org/10.4018/979-8-3693-6381-2">DOI</a></li>
-            <li><strong>Intersection of AI and Business Intelligence in Data-Driven Decision-Making</strong> (IGI Global, USA, 2024) - <a href="https://doi.org/10.4018/979-8-3693-5288-5">DOI</a></li>
+      <div class="card">
+        <h2 class="section">Education</h2>
+        <ul class="timeline">
+          <li><div class="when">2012 – 2017</div><div class="what">Ph.D. in Computer Science</div><div class="where">Bharathidasan University, India</div></li>
+          <li><div class="when">2010 – 2012</div><div class="what">M.Tech. in Information Technology</div><div class="where">Bharathidasan University, India · First Class with Distinction</div></li>
+          <li><div class="when">2008 – 2010</div><div class="what">M.Phil. in Computer Science</div><div class="where">Bharathidasan University, India · First Class with Distinction</div></li>
+          <li><div class="when">2006 – 2008</div><div class="what">M.Sc. in Computer Science</div><div class="where">University of Madras, India · First Class</div></li>
+          <li><div class="when">2003 – 2006</div><div class="what">B.Sc. in Computer Science</div><div class="where">University of Madras, India · First Class</div></li>
+          <li><div class="when">April 2017</div><div class="what">Tamil Nadu State Eligibility Test (TNSET)</div><div class="where">Qualified for Assistant Professor in Computer Science &amp; Applications</div></li>
         </ul>
-    </section>
+      </div>
+    </div>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li>
-                <strong>A simulation-based study to implement Intelligent Transport Systems concepts in VANETs using AODV routing protocol in NS2</strong><br>
-                Fourth International Conference on Advanced Computing (ICoAC) (IEEE, 2012) - <a href="https://doi.org/10.1109/ICoAC.2012.6416854">DOI</a> [Scopus Indexed]
-            </li>
-            <li>
-                <strong>CBAODV: An enhanced reactive routing algorithm to reduce connection breakage in VANET</strong><br>
-                Artificial Intelligence and Evolutionary Algorithms in Engineering Systems (Springer, 2015) - <a href="https://doi.org/10.1007/978-81-322-2135-7_57">DOI</a> [Scopus Indexed]
-            </li>
-            <li>
-                <strong>ERMCB-CRSV: A Framework to Enhance Reactive Mechanism by Reducing Connection Breakage using Client and Remote Storage in VANET</strong><br>
-                International Journal of Control Theory and Applications, Vol: 9, Issue:27, 2016 [Scopus Indexed]
-            </li>
-            <li>
-                <strong>Effect of fuel injection pressure and timing on Polanga (Calophyllum Inophyllum) biodiesel blends for engine performance and emissions analysis</strong><br>
-                Energy Sources, Part A (2019) - <a href="https://doi.org/10.1080/15567036.2019.1583696">DOI</a> [Scopus Indexed]
-            </li>
+    <div class="card" style="margin-top:24px">
+      <h2 class="section">Teaching Interests</h2>
+      <div class="chips">
+        <span class="chip">Cybersecurity</span><span class="chip">Network Security</span><span class="chip">AI for Cybersecurity</span>
+        <span class="chip">Ethical Hacking &amp; Penetration Testing</span><span class="chip">Digital Forensics &amp; Incident Response</span>
+        <span class="chip">IoT Security</span><span class="chip">Mobile Application Security</span><span class="chip">Cloud Security</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section id="publications" class="page">
+    <h1 class="page-title">Publications</h1>
+    <p class="page-sub">Journal articles, conference papers, and book chapters in cybersecurity, AI, IoT, blockchain, and data analytics.</p>
+
+    <div class="card">
+      <div class="profiles">
+        <b>Research Profiles:</b>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=55602548600" target="_blank" rel="noopener">Scopus (ID: 55602548600)</a>
+        <a href="https://orcid.org/0000-0002-9728-477X" target="_blank" rel="noopener">ORCID (0000-0002-9728-477X)</a>
+        <a href="https://scholar.google.com/citations?user=ejaQJu4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+      <div class="toolbar">
+        <div class="tabs" id="pubTabs">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="journal">Journals</button>
+          <button class="tab" data-filter="conference">Conferences</button>
+          <button class="tab" data-filter="chapter">Book Chapters</button>
+        </div>
+        <input class="search" id="pubSearch" type="search" placeholder="Search titles, venues, years…" aria-label="Search publications">
+      </div>
+
+      <div class="pub-group" data-group="journal">
+        <h2 class="section">Journal Articles <span class="count" id="c-journal"></span></h2>
+        <ol class="pubs" id="list-journal"></ol>
+      </div>
+      <div class="pub-group" data-group="conference">
+        <h2 class="section">Conference Papers <span class="count" id="c-conference"></span></h2>
+        <ol class="pubs" id="list-conference"></ol>
+      </div>
+      <div class="pub-group" data-group="chapter">
+        <h2 class="section">Book Chapters <span class="count" id="c-chapter"></span></h2>
+        <ol class="pubs" id="list-chapter"></ol>
+      </div>
+      <p class="empty" id="pubEmpty">No publications match your search.</p>
+    </div>
+  </section>
+
+  <!-- ================= BOOKS ================= -->
+  <section id="books" class="page">
+    <h1 class="page-title">Books</h1>
+    <p class="page-sub">Authored and edited books with Springer Nature, IGI Global, and Wiley.</p>
+
+    <div class="card">
+      <h2 class="section">Authored Books <span class="count" id="c-authored"></span></h2>
+      <ol class="pubs" id="list-authored"></ol>
+    </div>
+    <div class="card">
+      <h2 class="section">Edited Books <span class="count" id="c-edited"></span></h2>
+      <ol class="pubs" id="list-edited"></ol>
+      <h3 class="sub">In Progress</h3>
+      <ol class="pubs" id="list-edited-progress"></ol>
+    </div>
+  </section>
+
+  <!-- ================= PATENTS ================= -->
+  <section id="patents" class="page">
+    <h1 class="page-title">Patents &amp; Copyrights</h1>
+    <p class="page-sub">18 patents in India and the United Kingdom, a granted design patent, and a registered copyright.</p>
+
+    <div class="card">
+      <h2 class="section">Granted Patents</h2>
+      <h3 class="sub">Granted Patent – United Kingdom</h3>
+      <ol class="pubs" id="list-pat-uk"></ol>
+      <h3 class="sub">Granted Design Patent – India</h3>
+      <ol class="pubs" id="list-pat-design"></ol>
+    </div>
+    <div class="card">
+      <h2 class="section">Published Patents – India <span class="count" id="c-pat-in"></span></h2>
+      <ol class="pubs" id="list-pat-in"></ol>
+    </div>
+    <div class="card">
+      <h2 class="section">Registered Copyright – India</h2>
+      <ol class="pubs" id="list-copyright"></ol>
+    </div>
+  </section>
+
+  <!-- ================= AWARDS ================= -->
+  <section id="awards" class="page">
+    <h1 class="page-title">Awards &amp; Service</h1>
+    <p class="page-sub">Recognitions, academic service, and invited talks.</p>
+
+    <div class="card">
+      <h2 class="section">Awards &amp; Recognitions</h2>
+      <ul class="timeline">
+        <li><div class="when">April 2026</div><div class="what">Secure Systems Design Award</div>
+          <div class="where">International Conference on Cybersecurity, Data Science, and Machine Learning (ICCDM 2026), Universiti Putra Malaysia &amp; University of Delhi</div></li>
+        <li><div class="when">February 2025</div><div class="what">Letter of Appreciation</div>
+          <div class="where">SIUT 3rd Anniversary, awarded by the Chairman of the Board of Trustees</div></li>
+        <li><div class="when">March 2024</div><div class="what">Best Paper Award</div>
+          <div class="where">2nd Doctoral Symposium on Human-Centered Computing (Human-2024), CSI Kolkata Chapter &amp; Sister Nivedita University, India</div>
+          <p>Deep Learning Enhanced Analysis of the Influence of Demographic, Socio-economic Factors, and Social Media Advertisements on Consumers' Online Shopping Behavior</p></li>
+        <li><div class="when">March 2023</div><div class="what">Best Paper Award</div>
+          <div class="where">International Conference on Artificial Intelligence in Biometrics (AIIB 2023), CHRIST (Deemed to be University), India</div>
+          <p>OEC-WSR: Optimizing Energy Consumption in Wireless Sensor Networks Using Sensor and Relay Nodes</p></li>
+        <li><div class="when">November 2022</div><div class="what">Best Paper Award</div>
+          <div class="where">Journal of Mobile Multimedia (River Publishers)</div>
+          <p>Modeling Real-Time Traffic Flow Monitoring System Using Deep Learning and Unmanned Aerial Vehicles</p></li>
+      </ul>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <h2 class="section">Academic Service</h2>
+        <ul class="timeline">
+          <li><div class="when">March 2026</div><div class="what">Session Chair</div>
+            <div class="where">ICMMCS 2026, Society for Intelligent Systems &amp; Berlin School of Business and Innovation, Berlin, Germany</div></li>
+          <li><div class="when">November 2025</div><div class="what">Internship Trainer</div>
+            <div class="where">Industrial-Level Security &amp; Penetration Testing Program, SIUT, Uzbekistan</div></li>
+          <li><div class="when">May 2024</div><div class="what">Conference Reviewer</div>
+            <div class="where">ICIESTR 2024, University of Technology and Applied Sciences, Muscat, Oman</div></li>
+          <li><div class="when">April 2024</div><div class="what">Session Chair</div>
+            <div class="where">CFQRMS 01, Computational Finance and Quantitative Risk Management Symposium, SIUT, Uzbekistan</div></li>
         </ul>
-    </section>
-
-    <section id="patents">
-        <h2>Patents</h2>
-        <h3>Patents Granted (UK)</h3>
-        <ul>
-            <li><strong>AI-based Robot for Agriculture</strong> [6348153]</li>
+      </div>
+      <div class="card">
+        <h2 class="section">Invited Talks</h2>
+        <ul class="timeline">
+          <li><div class="when">November 2025</div><div class="what">Cyberattacks Are Everywhere – Stay Alert, Stay Safe</div>
+            <div class="where">Scientific Seminar Series, SIUT, Uzbekistan</div>
+            <p>Emerging threats including phishing, ransomware, and social engineering, with practical strategies for institutional cybersecurity awareness.</p></li>
         </ul>
-        
-        <h3>Design Patent (India)</h3>
-        <ul>
-            <li>Wireless Bio Authentication Mousekey (402755-001) – 2023</li>
-        </ul>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>Connect on <a href="https://www.linkedin.com/in/arul-kumar-natarajan" target="_blank">LinkedIn</a> | <a href="https://github.com/itsprofarul" target="_blank">GitHub</a></p>
-        <p>&copy; 2025 Dr. Arul Kumar Natarajan. All rights reserved.</p>
-    </footer>
+  <!-- ================= CERTIFICATIONS ================= -->
+  <section id="certifications" class="page">
+    <h1 class="page-title">Certifications</h1>
+    <p class="page-sub">Professional certifications in cybersecurity, networking, and AI.</p>
+    <div class="card">
+      <table>
+        <thead><tr><th>Certification</th><th>Issuing Organization</th><th>Year</th></tr></thead>
+        <tbody>
+          <tr><td>GenAI for Cybersecurity</td><td>EC-Council</td><td>2024</td></tr>
+          <tr><td>Ethical Hacking Essentials (EHE)</td><td>EC-Council</td><td>2024</td></tr>
+          <tr><td>Google Certified Educator Level 1</td><td>Google Teacher Center</td><td>2024</td></tr>
+          <tr><td>Cybersecurity at Work</td><td>LinkedIn Learning</td><td>2024</td></tr>
+          <tr><td>Learning No-Code AI</td><td>LinkedIn Learning</td><td>2023</td></tr>
+          <tr><td>CCNA: Routing and Switching</td><td>Cisco Systems</td><td>2017</td></tr>
+          <tr><td>MTA: Networking Fundamentals</td><td>Microsoft</td><td>2017</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="page">
+    <h1 class="page-title">Contact</h1>
+    <p class="page-sub">Open to research collaborations, editorial work, and speaking invitations.</p>
+    <div class="card">
+      <div class="contact-grid">
+        <div class="contact-item"><small>University Email</small><a href="mailto:arul.natarajan@siut.uz">arul.natarajan@siut.uz</a></div>
+        <div class="contact-item"><small>Personal Email</small><a href="mailto:itsprofarul@gmail.com">itsprofarul@gmail.com</a></div>
+        <div class="contact-item"><small>Affiliation</small>School of Computing, Samarkand International University of Technology, Samarkand, Uzbekistan</div>
+        <div class="contact-item"><small>Research Profiles</small>
+          <a href="https://scholar.google.com/citations?user=ejaQJu4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> ·
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=55602548600" target="_blank" rel="noopener">Scopus</a> ·
+          <a href="https://orcid.org/0000-0002-9728-477X" target="_blank" rel="noopener">ORCID</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Dr. Arul Kumar Natarajan · Last updated October 2026
+</footer>
+
+<script>
+/* ==========================================================
+   DATA — edit these lists to update the site.
+   t = title, v = venue (italic), m = details, doi, url,
+   idx = "scopus" | "gs" | "prog", award = note
+   ========================================================== */
+const journal = [
+  {t:"Adoption of Recommended Expert Systems in Agriculture", v:"Journal of Smart and Sustainable Farming", m:"Vol. 1, January 2025", doi:"10.64026/JSSF/2025001", idx:"gs"},
+  {t:"Downdraft Gasification for Biogas Production: The Role of Artificial Intelligence", v:"Journal of Energy Resources and Technology", m:"ASME, pp. 1–58, December 2024", doi:"10.1115/1.4066059", idx:"scopus", q:"Q2"},
+  {t:"Eagle Strategy Arithmetic Optimisation Algorithm with Optimal Deep Convolutional Forest Based FinTech Application for Hyper-automation", v:"Enterprise Information Systems", m:"Taylor & Francis, Article 2188123, March 2023", doi:"10.1080/17517575.2023.2188123", idx:"scopus"},
+  {t:"Modeling of Real Time Traffic Flow Monitoring System Using Deep Learning and Unmanned Aerial Vehicles", v:"Journal of Mobile Multimedia", m:"River Publishers, pp. 477–496, November 2022", doi:"10.13052/jmm1550-4646.1926", idx:"scopus", award:"Best Paper Award"},
+  {t:"Blockchain with Deep Learning-Enabled Secure Healthcare Data Transmission and Diagnostic Model", v:"International Journal of Modeling, Simulation, and Scientific Computing", m:"13(04), Article 2241006, January 2022", doi:"10.1142/S1793962322410069", idx:"scopus"},
+  {t:"Blockchain for Securing Healthcare Data Using Squirrel Search Optimization Algorithm", v:"Intelligent Automation & Soft Computing", m:"32, pp. 1815–1829, December 2021", doi:"10.32604/iasc.2022.021822", idx:"scopus"},
+  {t:"An Efficient Low Complexity Compression-Based Optimal Homomorphic Encryption for Secure Fiber Optic Communication", v:"Optik", m:"252, Article 168545, December 2021", doi:"10.1016/j.ijleo.2021.168545", idx:"scopus"},
+  {t:"HHO-Based Vector Quantization Technique for Biomedical Image Compression in Cloud Computing", v:"International Journal of Image and Graphics", m:"Article 2240008, November 2021", doi:"10.1142/S0219467822400083", idx:"scopus"},
+  {t:"Machine Learning with Data Science-Enabled Lung Cancer Diagnosis and Classification Using Computed Tomography Images", v:"International Journal of Image and Graphics", m:"Article 2240002, November 2021", doi:"10.1142/S0219467822400022", idx:"scopus"},
+  {t:"IoT-Based Traffic Prediction and Traffic Signal Control System for Smart City", v:"Soft Computing", m:"25(18), pp. 12241–12248, May 2021", doi:"10.1007/s00500-021-05896-x", idx:"scopus"},
+  {t:"A Comprehensive Novel Model for Network Speech Anomaly Detection System Using Deep Learning Approach", v:"International Journal of Speech Technology", m:"23(2), pp. 305–313, March 2020", doi:"10.1007/s10772-020-09693-z", idx:"scopus"},
+  {t:"WCBAODV: An Efficacious Approach to Detect Wormhole Attack in VANET Using CBAODV Algorithm", v:"International Journal of Advanced Trends in Computer Science and Engineering", m:"8(1.2), pp. 20–25, 2019", idx:"scopus"},
+  {t:"Effect of Fuel Injection Pressure and Timing on Polanga (Calophyllum Inophyllum) Biodiesel Blends for Engine Performance and Emissions Analysis", v:"Energy Sources, Part A: Recovery, Utilization, and Environmental Effects", m:"41(24), pp. 3046–3057, February 2019", doi:"10.1080/15567036.2019.1583696", idx:"scopus"},
+  {t:"ERMCB-CRSV: A Framework to Enhance Reactive Mechanism by Reducing Connection Breakage Using Client and Remote Storage in VANET", v:"International Journal of Control Theory and Applications", m:"9(27), pp. 33–40, 2016. ISSN: 0974-5572", idx:"scopus"}
+];
+
+const conference = [
+  {t:"Empirical Comparison of LSTM and GRU for Bitcoin Price Prediction", v:"9th International Conference on Inventive Computation Technologies (ICICT 2026)", m:"IEEE, Kirtipur, Nepal, April 2026", doi:"10.1109/ICICT68280.2026.11510885", idx:"scopus"},
+  {t:"An Experimental and Comparative Study of Image Fusion Methods for Multi-Sensor Medical Images", v:"Smart Innovation, Systems and Technologies", m:"Springer Nature, January 2026", doi:"10.1007/978-3-032-29237-7_35", idx:"scopus"},
+  {t:"Deep Learning Enhanced Analysis of the Influence of Demographic, Socio-Economic Factors, and Social Media Advertisements on Consumers' Online Shopping Behavior", v:"Intelligent Human Centered Computing", m:"Springer, pp. 611–622, May 2025", doi:"10.1007/978-981-96-1761-6_43", idx:"gs", award:"Best Paper Award, Human-2024"},
+  {t:"A Comprehensive Analysis of the Impact of Demographic, Socioeconomic Factors and Social Media Advertisements on Consumers' Online Shopping Behavior", v:"Recent Trends in Intelligence Enabled Research", m:"Springer, pp. 407–424, April 2025", doi:"10.1007/978-981-97-9515-4_31", idx:"scopus"},
+  {t:"Data-Driven Strategies for Twitter Engagement: Hashtag Recommendations and API Insights", v:"Recent Trends in Intelligence Enabled Research", m:"Springer, pp. 57–75, April 2025", doi:"10.1007/978-981-97-9515-4_5", idx:"scopus"},
+  {t:"Enhancing Cybersecurity in Smart Grid Systems through Advanced Log File Analysis with Machine and Deep Learning Techniques", v:"3rd International Conference on Sustainable Mobility Applications, Renewables and Technology (SMART)", m:"IEEE, November 2024", doi:"10.1109/SMART63170.2024.10815479", idx:"scopus"},
+  {t:"Multi-Medium Handover Transactions with Interactive and Protected Self-Intelligence Principles for Unified Military Vehicular Sensor Networks", v:"3rd International Conference on SMART", m:"IEEE, November 2024", doi:"10.1109/SMART63170.2024.10815505", idx:"scopus"},
+  {t:"Leveraging Deep Learning for Sustainable E-commerce: Reducing Opinion Spam in Smart Mobility Platforms", v:"3rd International Conference on SMART", m:"IEEE, November 2024", doi:"10.1109/SMART63170.2024.10815473", idx:"scopus"},
+  {t:"EFMD-DCNN: Efficient Face Mask Detection Model in Street Camera Using Double CNN", v:"Computational Sciences and Sustainable Technologies, CCIS", m:"Springer, pp. 427–437, February 2024", doi:"10.1007/978-3-031-50993-3_34", idx:"scopus"},
+  {t:"An Interrogation of Android Application-Based Privilege Escalation Attacks", v:"5th ETLTC International Conference on ICT Integration in Technical Education", m:"University of Aizu, Japan, January 2023", doi:"10.1063/5.0182955", idx:"scopus"},
+  {t:"Survey on Malicious URL Detection Techniques", v:"6th International Conference on Trends in Electronics and Informatics (ICOEI)", m:"IEEE, pp. 778–781, April 2022", doi:"10.1109/ICOEI53556.2022.9777221", idx:"scopus"},
+  {t:"An Optimized Algorithm for Selecting Stable Multipath Routing in MANET Using Proficient Multipath Routing and Glowworm Detection Techniques", v:"Sustainable Advanced Computing", m:"Springer, pp. 511–523, March 2022", doi:"10.1007/978-981-16-9012-9_41", idx:"scopus"},
+  {t:"DPETAs: Detection and Prevention of Evil Twin Attacks on Wi-Fi Networks", v:"Sustainable Advanced Computing", m:"Springer, pp. 559–568, March 2022", doi:"10.1007/978-981-16-9012-9_45", idx:"scopus"},
+  {t:"Mudhr: Malicious URL Detection Using Heuristic Rules-Based Approach", v:"AIP Conference Proceedings", m:"Vol. 2393, No. 1, Article 020176, February 2021", doi:"10.1063/5.0074077", idx:"scopus"},
+  {t:"CPAODV: Classifying and Assigning 3 Level Preference to the Nodes in VANET Using AODV Based CBAODV Algorithm", v:"International Conference on Information, Communication and Computing Technology", m:"Springer, pp. 432–445, January 2020", doi:"10.1007/978-3-030-38501-9_42", idx:"scopus"},
+  {t:"Improved Crypto Algorithm for High-Speed Internet of Things (IoT) Applications", v:"International Conference on Information, Communication and Computing Technology", m:"Springer, pp. 281–289, January 2020", doi:"10.1007/978-3-030-38501-9_28", idx:"scopus"},
+  {t:"CBAODV: An Enhanced Reactive Routing Algorithm to Reduce Connection Breakage in VANET", v:"Proceedings of ICAEES 2014", m:"Vol. 2, Springer, pp. 533–539, November 2014", doi:"10.1007/978-81-322-2135-7_57", idx:"scopus"},
+  {t:"A Simulation-Based Study to Implement Intelligent Transport Systems Concepts in VANETs Using AODV Routing Protocol in NS2", v:"4th International Conference on Advanced Computing (ICoAC)", m:"IEEE, pp. 1–4, December 2012", doi:"10.1109/ICoAC.2012.6416854", idx:"scopus"}
+];
+
+const chapter = [
+  {t:"Simulating Climate Scenarios with Advanced Analytics: From Past Trends to Future Projections", v:"Data Science and AI for Climate Change: Building a Sustainable Future", m:"Apple Academic Press, forthcoming February 2027", idx:"prog"},
+  {t:"Addressing Security Vulnerabilities in 6G-Assisted IoT-Based Edge Services Using DistilBERT and the NUSW-NB15_GT Dataset", v:"Edge Learning for 6G-Enabled Internet of Things: Challenges, Threats and Opportunities", m:"Apple Academic Press, May 2026", idx:"gs"},
+  {t:"Enhancing Log File Analysis in Digital Forensics and Incident Response through Machine Learning", v:"Cyber Security, Forensics & National Security", m:"CRC Press, October 2025", doi:"10.1201/9781003497868-17", idx:"scopus"},
+  {t:"Generative AI for Healthcare Security: Addressing Privacy Challenges Through Anomaly Detection in Healthcare Communications", v:"Advances in AI for Healthcare Applications", m:"CRC Press, June 2025", doi:"10.1201/9781003503385-5", idx:"scopus"},
+  {t:"Study and Investigations of Ethical Implications and Responsible Use of AI in Automotive Vehicular Technology", v:"Harnessing AI for Control Engineering", m:"IGI Global, April 2025", doi:"10.4018/979-8-3693-7812-0.ch014", idx:"scopus"},
+  {t:"Navigating Emotional Landscapes: Enhancing Communication Through Facial Emotion Analysis in Presentations", v:"Adopting Artificial Intelligence Tools in Higher Education: Teaching and Learning", m:"CRC Press, January 2025", doi:"10.1201/9781003469315", idx:"scopus"},
+  {t:"Comprehensive Analysis of Falcon 7B: A State-of-the-Art Generative Large Language Model", v:"Generative AI: Theory and Applications", m:"Springer, December 2024", doi:"10.1007/978-981-97-8460-8_8", idx:"scopus"},
+  {t:"Generative AI for Cybersecurity and Privacy in Cyber-Physical Systems", v:"Navigating Cyber-Physical Systems with Cutting-Edge Technologies", m:"IGI Global, December 2024", doi:"10.4018/979-8-3693-5728-6.ch003", idx:"scopus"},
+  {t:"Investigation of Smart Wearable Technology for Healthcare Educational Analytics and Applications", v:"Wearable Devices and Smart Technology for Educational Teaching Assistance", m:"IGI Global, December 2024", doi:"10.4018/979-8-3693-7817-5.ch007", idx:"scopus"},
+  {t:"Uncovering Hidden Threats in IoT-Centered Cloud Technology: A Study on Hardware Trojans in Security Prospects", v:"Convergence of Cybersecurity and Cloud Computing", m:"IGI Global, December 2024", doi:"10.4018/979-8-3693-6859-6.ch023", idx:"scopus"},
+  {t:"Foundations of AI and Machine Learning in Real Estate Valuation: An Analysis Using the California Housing Prices Dataset with Python Implementations", v:"Data Analytics and AI for Quantitative Risk Assessment and Financial Computation", m:"IGI Global, November 2024", doi:"10.4018/979-8-3693-6215-0.ch001", idx:"scopus"},
+  {t:"Optimizing Supply Chain with AI-Powered BI Systems", v:"AI-Powered Business Intelligence for Modern Organizations", m:"IGI Global, October 2024", doi:"10.4018/979-8-3693-8844-0.ch007", idx:"scopus"},
+  {t:"Leveraging Unsupervised Machine Learning to Optimize Customer Segmentation and Product Recommendations for Increased Retail Profits", v:"Intersection of AI and Business Intelligence in Data-Driven Decision-Making", m:"IGI Global, August 2024", doi:"10.4018/979-8-3693-5288-5.ch009", idx:"scopus"},
+  {t:"Securing Healthcare Systems Integrating AI for Cybersecurity Solutions and Privacy Preservation", v:"Cybersecurity and Data Management Innovations for Revolutionizing Healthcare", m:"IGI Global, July 2024", doi:"10.4018/979-8-3693-7457-3.ch015", idx:"scopus"},
+  {t:"Advancing Precision Medicine: Integrating AI and Machine Learning for Personalized Healthcare Solutions", v:"Artificial Intelligence Transformations for Healthcare Applications", m:"IGI Global, July 2024", doi:"10.4018/979-8-3693-7462-7.ch015", idx:"scopus"},
+  {t:"The Impact and Integration of Cloud Computing for Enhanced Patient Care and Operational Efficiency", v:"Technologies for Sustainable Healthcare Development", m:"IGI Global, July 2024", doi:"10.4018/979-8-3693-2901-6.ch016", idx:"scopus"},
+  {t:"Exploring Vector and Raster Data Formats for Geospatial Visualization with Python", v:"Geospatial Application Development Using Python Programming", m:"IGI Global, pp. 163–186, May 2024", doi:"10.4018/979-8-3693-1754-9.ch006", idx:"scopus"},
+  {t:"Python Programming for Geospatial Applications: Web Mapping, Interactive Visualization, and Beyond", v:"Geospatial Application Development Using Python Programming", m:"IGI Global, pp. 39–61, May 2024", doi:"10.4018/979-8-3693-1754-9.ch002", idx:"scopus"},
+  {t:"Internet of Things and Blockchain in Healthcare: Challenges and Solutions", v:"EAI/Springer Innovations in Communication and Computing", m:"Springer, October 2023", doi:"10.1007/978-3-031-35751-0_2", idx:"scopus"},
+  {t:"Application Areas, Benefits and Research Challenges of Converging Blockchain and Machine Learning Techniques", v:"EAI/Springer Innovations in Communication and Computing", m:"Springer, October 2023", doi:"10.1007/978-3-031-35751-0_1", idx:"scopus"},
+  {t:"Organizing Data Using Lists: A Sequential Data Structure", v:"Advanced Applications of Python Data Structures and Algorithms", m:"IGI Global, pp. 35–51, July 2023", doi:"10.4018/978-1-6684-7100-5.ch002", idx:"scopus"},
+  {t:"Optimizing Energy Consumption in Wireless Sensor Networks Using Python Libraries", v:"Advanced Applications of Python Data Structures and Algorithms", m:"IGI Global, pp. 222–235, July 2023", doi:"10.4018/978-1-6684-7100-5.ch011", idx:"scopus"},
+  {t:"An Exploratory Study of Python's Role in the Advancement of Cryptocurrency and Blockchain Ecosystems", v:"Advanced Applications of Python Data Structures and Algorithms", m:"IGI Global, pp. 236–252, July 2023", doi:"10.4018/978-1-6684-7100-5.ch012", idx:"scopus"},
+  {t:"Exploring the Role of Python in Self-Supervised Contrastive Learning for Generating Medical Imaging Reports", v:"Advanced Applications of Python Data Structures and Algorithms", m:"IGI Global, pp. 253–265, July 2023", doi:"10.4018/978-1-6684-7100-5.ch013", idx:"scopus"},
+  {t:"Python's Role in Predicting Type 2 Diabetes Using Insulin DNA Sequence", v:"Advanced Applications of Python Data Structures and Algorithms", m:"IGI Global, pp. 266–278, July 2023", doi:"10.4018/978-1-6684-7100-5.ch014", idx:"scopus"},
+  {t:"Feature Extraction and Diagnosis of Dementia Using Magnetic Resonance Imaging", v:"AI and IoT-Based Intelligent Health Care & Sanitation", m:"Bentham Science, pp. 159–175, 2023", doi:"10.2174/9789815136531123010013", idx:"scopus"},
+  {t:"Challenges and Solutions of Using Social Internet of Things (SIoT) in Healthcare and Medical Domains", v:"Advances in SIoT (Social Internet of Things)", m:"CRC Press, April 2023", doi:"10.1201/9781003282990", idx:"scopus"},
+  {t:"Secure IoT Protocol for Implementing Classified Electroencephalogram (EEG) Signals in the Field of Smart Healthcare", v:"Cyber Security Applications for Industry 4.0", m:"Chapman and Hall/CRC, pp. 111–129, October 2022", doi:"10.1201/9781003203087", idx:"scopus"},
+  {t:"Exploring Social Networking Data Sets", v:"Social Network Analysis: Theory and Applications", m:"Wiley, pp. 205–228, April 2022", doi:"10.1002/9781119836759.ch11", idx:"scopus"},
+  {t:"A Comprehensive Review on Blockchain-Based Internet of Things (BIoT): Security Threats, Challenges, and Applications", v:"Utilizing Blockchain Technologies in Manufacturing and Logistics Management", m:"IGI Global, pp. 25–44, January 2022", doi:"10.4018/978-1-7998-8697-6.ch002", idx:"gs"}
+];
+
+const authored = [
+  {t:"Learning Kali Linux for Cybersecurity: A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking", m:"Amazon, September 2026", url:"https://www.amazon.com/dp/B0HK25TJMS", urlText:"View on Amazon"},
+  {t:"Hands-On Computer Networks & AI-Driven Cybersecurity: A Comprehensive Student Guide", m:"Springer Nature, March 2026", doi:"10.1007/978-3-032-22035-6", idx:"scopus"},
+  {t:"XXVII (CC) – Smart Device Programming", m:"Center for Distance Education, Bharathidasan University, 2017"}
+];
+
+const edited = [
+  {t:"Generative AI Revolution: Transforming Healthcare and Life Sciences towards Sustainable Development in Industry 6.0", m:"Springer Nature, 2026", doi:"10.1007/978-3-032-23626-5", idx:"scopus"},
+  {t:"Fusion of Multimodal Generative AI and Blockchain Technology in Digital Media", m:"IGI Global, September 2025", doi:"10.4018/979-8-3373-1504-1", idx:"scopus"},
+  {t:"Securing AI-Generated Media with Blockchain Technologies", m:"IGI Global, August 2025", doi:"10.4018/979-8-3373-6481-0", idx:"scopus"},
+  {t:"AI-Powered Business Intelligence for Modern Organizations", m:"IGI Global, 2024", doi:"10.4018/979-8-3693-8844-0", idx:"scopus"},
+  {t:"Enhancing Communication and Decision-Making With AI", m:"IGI Global, 2024", doi:"10.4018/979-8-3693-9246-1", idx:"scopus"},
+  {t:"Data Analytics and AI for Quantitative Risk Assessment and Financial Computation", m:"IGI Global, 2024", doi:"10.4018/979-8-3693-6215-0", idx:"scopus"},
+  {t:"Ethics, Machine Learning, and Python in Geospatial Analysis", m:"IGI Global, 2024", doi:"10.4018/979-8-3693-6381-2", idx:"scopus"},
+  {t:"Intersection of AI and Business Intelligence in Data-Driven Decision-Making", m:"IGI Global, 2024", doi:"10.4018/979-8-3693-5288-5", idx:"scopus"},
+  {t:"Geospatial Application Development Using Python Programming", m:"IGI Global, 2024", doi:"10.4018/979-8-3693-1754-9", idx:"scopus"},
+  {t:"Advanced Applications of Python Data Structures and Algorithms", m:"IGI Global, 2023", doi:"10.4018/978-1-6684-7100-5", idx:"scopus"}
+];
+
+const editedProgress = [
+  {t:"Artificial Intelligence in Cybersecurity for Banking and Finance", m:"Wiley, submitted September 2026", idx:"prog"},
+  {t:"Autonomous Aerial Systems: Machine Learning for Perception, Planning, and Control in UAVs", m:"Springer, expected January 2027", idx:"prog"}
+];
+
+const patUK = [
+  {t:"AI-Based Robot for Agriculture", m:"Patent No. GB6348153, granted February 28, 2024"}
+];
+const patDesign = [
+  {t:"Wireless Bio Authentication MouseKey", m:"Design No. 402755-001, granted December 2023"}
+];
+const patIN = [
+  ["Brain Inspired Artificial Intelligence Implant to Detect Heart Disease Using Reservoir Computing", "202141052156", "December 3, 2021"],
+  ["Hybrid Artificial Intelligence Architecture for Analysis of Charging Profile of Electric Vehicles", "202131040276", "December 3, 2021"],
+  ["Falling Cat Inspired Intelligent Quadrupedal Robot to Assist People During Risky Mountain Trekking", "202141048690", "November 5, 2021"],
+  ["Machine Learning Based Intelligent Sensor Framework to Assist Farmers in Weather Forecasting for Appropriate Crop Cultivation", "202141047024", "November 5, 2021"],
+  ["Intelligent Agriculture – Smart IoT System to Assist Farmers in Effective Decision Making Using Data Science", "202141046585", "November 5, 2021"],
+  ["Sensor Based Intelligent Wearable Helmet for Early Detection of Stroke in Patients", "202141044803", "November 5, 2021"],
+  ["A System for Automatic Pallet Changer in Warehouse by Using Machine Learning", "202141042804", "November 5, 2021"],
+  ["Development of Big Data Analytics for Intelligent Industrial Manufacturing Based on Wireless and IoT Technology", "202141041225", "October 29, 2021"],
+  ["Sensor Based Intelligent Smart Watch for Early Detection of Heart Attacks in Patients Suffering from Cardiovascular Diseases", "202141045592", "October 15, 2021"],
+  ["Sensor Based Intelligent Digital Nose to Detect Spoilage of Food Using Machine Learning", "202141042368", "October 1, 2021"],
+  ["Dragonfly Brain-Inspired Intelligent Robotic Drone to Trap Houseflies", "202141039960", "September 10, 2021"],
+  ["Novel Approach for Investigation & Synthesis of Non-Linear Optical Crystal", "202141040430", "September 10, 2021"],
+  ["Secure and Automated Driving Inspector Powered by Arduino and Raspberry Pi Using Deep Learning", "202141038074", "September 3, 2021"],
+  ["IoT Based Smart Energy Theft Detection and Power Monitoring System for Smart Homes", "202141035598", "August 13, 2021"],
+  ["Machine Learning and Image Processing Based Smart Prediction of Human Emotions and Character", "202141035789", "August 13, 2021"],
+  ["Automatic Vehicle License Plate Recognizer for Kannada Script Using TensorFlow Based Convolutional Neural Network Model", "201941054190", "January 24, 2020"],
+  ["Fingerprint Based Authentication Model to Protect the SIM Card of the Mobile", "201941048500", "December 6, 2019"]
+].map(p => ({t:p[0], m:"Application No. " + p[1] + ", published " + p[2]}));
+
+const copyright = [
+  {t:"An Artificial Intelligence & Machine Learning Based Interface Segmentation, Classification and Tracking of Issue Nuclei Through Image Separation and Clustering",
+   m:"B. Santhosh Kumar, Mrunalini U. Buradkar, <b>Arul Kumar N.</b>, T. Ch. Anil Kumar. Literary Work, Copyright Office, Government of India. Registration No. L-111199/2022, January 25, 2022", raw:true}
+];
+
+/* ==========================================================
+   RENDERING
+   ========================================================== */
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const TAGS = {scopus:["scopus","Scopus"], gs:["gs","Google Scholar"], prog:["prog","In Progress"]};
+
+function item(p) {
+  let h = '<span class="pt">' + esc(p.t) + '.</span> ';
+  if (p.v) h += '<span class="pv">' + esc(p.v) + '</span>, ';
+  h += '<span class="pm">' + (p.raw ? p.m : esc(p.m)) + '.';
+  if (p.doi) h += ' DOI: <a href="https://doi.org/' + p.doi + '" target="_blank" rel="noopener">' + p.doi + '</a>';
+  if (p.url) h += ' <a href="' + p.url + '" target="_blank" rel="noopener">' + p.urlText + '</a>';
+  h += '</span>';
+  if (p.idx) { const t = TAGS[p.idx]; h += '<span class="tag ' + t[0] + '">' + t[1] + (p.q ? ", " + p.q : "") + '</span>'; }
+  if (p.award) h += '<span class="tag award">&#127942; ' + esc(p.award) + '</span>';
+  return h;
+}
+function render(id, list, countId) {
+  document.getElementById(id).innerHTML =
+    list.map(p => '<li data-text="' + esc((p.t + " " + (p.v||"") + " " + p.m).toLowerCase()) + '">' + item(p) + '</li>').join("");
+  if (countId) document.getElementById(countId).textContent = list.length;
+}
+render("list-journal", journal, "c-journal");
+render("list-conference", conference, "c-conference");
+render("list-chapter", chapter, "c-chapter");
+render("list-authored", authored, "c-authored");
+render("list-edited", edited, "c-edited");
+render("list-edited-progress", editedProgress);
+render("list-pat-uk", patUK);
+render("list-pat-design", patDesign);
+render("list-pat-in", patIN, "c-pat-in");
+render("list-copyright", copyright);
+
+/* ---------- Publication filter + search ---------- */
+let filter = "all";
+const search = document.getElementById("pubSearch");
+function applyFilter() {
+  const q = search.value.trim().toLowerCase();
+  let any = false;
+  document.querySelectorAll(".pub-group").forEach(g => {
+    const show = filter === "all" || g.dataset.group === filter;
+    let n = 0;
+    g.querySelectorAll("li").forEach(li => {
+      const hit = !q || li.dataset.text.includes(q);
+      li.style.display = hit ? "" : "none";
+      if (hit) n++;
+    });
+    g.style.display = show && n > 0 ? "" : "none";
+    if (show && n > 0) any = true;
+  });
+  document.getElementById("pubEmpty").style.display = any ? "none" : "block";
+}
+document.querySelectorAll("#pubTabs .tab").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("#pubTabs .tab").forEach(x => x.classList.remove("active"));
+  b.classList.add("active"); filter = b.dataset.filter; applyFilter();
+}));
+search.addEventListener("input", applyFilter);
+
+/* ---------- Menu navigation ---------- */
+const pages = [...document.querySelectorAll(".page")];
+const links = [...document.querySelectorAll(".menu a")];
+const menu = document.querySelector(".menu");
+const toggle = document.querySelector(".menu-toggle");
+function show() {
+  const id = (location.hash || "#home").slice(1);
+  const target = pages.find(p => p.id === id) ? id : "home";
+  pages.forEach(p => p.classList.toggle("active", p.id === target));
+  links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + target));
+  menu.classList.remove("open"); toggle.setAttribute("aria-expanded", "false");
+  setTimeout(() => window.scrollTo(0, 0), 0);
+}
+window.addEventListener("hashchange", show);
+toggle.addEventListener("click", () => {
+  const open = menu.classList.toggle("open");
+  toggle.setAttribute("aria-expanded", open);
+});
+show();
+</script>
 </body>
 </html>
