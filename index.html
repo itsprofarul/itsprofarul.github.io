@@ -320,6 +320,15 @@
           </div>
           <label>Message <span class="req">*</span>
             <textarea name="message" rows="6" required></textarea></label>
+          <div class="captcha-box">
+            <span class="captcha-label">Security Check <span class="req">*</span></span>
+            <div class="captcha-row">
+              <canvas id="captchaCanvas" width="180" height="56" aria-label="Captcha image"></canvas>
+              <button type="button" class="captcha-refresh" id="captchaRefresh" title="Show a new code" aria-label="Show a new code">&#8635;</button>
+              <input type="text" id="captchaInput" maxlength="6" autocomplete="off" spellcheck="false"
+                     placeholder="Type the characters" aria-label="Type the characters shown in the image">
+            </div>
+          </div>
           <!-- spam trap: real visitors never see or fill this -->
           <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn-send">Send Message</button>
@@ -546,6 +555,42 @@ search.addEventListener("input", applyFilter);
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/itsprofarul@gmail.com";
 const form = document.getElementById("contactForm");
 const statusEl = document.getElementById("formStatus");
+
+/* ---------- Random image captcha ---------- */
+const CHARS = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O, 1/I look-alikes
+const canvas = document.getElementById("captchaCanvas");
+const capInput = document.getElementById("captchaInput");
+let captchaCode = "", captchaShownAt = 0, attempts = 0;
+const rnd = (a, b) => a + Math.random() * (b - a);
+function newCaptcha() {
+  const buf = new Uint32Array(6); crypto.getRandomValues(buf);
+  captchaCode = Array.from(buf, n => CHARS[n % CHARS.length]).join("");
+  const c = canvas.getContext("2d");
+  c.clearRect(0, 0, canvas.width, canvas.height);
+  c.fillStyle = "#eef2fa"; c.fillRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < 6; i++) {               // noise lines
+    c.strokeStyle = `hsla(${rnd(200,240)},45%,${rnd(45,70)}%,.6)`;
+    c.lineWidth = rnd(1, 2); c.beginPath();
+    c.moveTo(rnd(0,180), rnd(0,56)); c.bezierCurveTo(rnd(0,180), rnd(0,56), rnd(0,180), rnd(0,56), rnd(0,180), rnd(0,56));
+    c.stroke();
+  }
+  [...captchaCode].forEach((ch, i) => {         // distorted characters
+    c.save();
+    c.translate(18 + i * 27, 30 + rnd(-6, 6));
+    c.rotate(rnd(-0.45, 0.45));
+    c.font = `600 ${Math.round(rnd(24, 30))}px Georgia, serif`;
+    c.fillStyle = ["#14213d", "#1f3260", "#8a6213", "#3c4557"][i % 4];
+    c.textBaseline = "middle"; c.fillText(ch, -8, 0);
+    c.restore();
+  });
+  for (let i = 0; i < 40; i++) {               // noise dots
+    c.fillStyle = "rgba(20,33,61,.35)"; c.fillRect(rnd(0,180), rnd(0,56), 2, 2);
+  }
+  capInput.value = ""; captchaShownAt = Date.now();
+}
+document.getElementById("captchaRefresh").addEventListener("click", newCaptcha);
+newCaptcha();
+
 form.addEventListener("submit", async e => {
   e.preventDefault();
   statusEl.className = "form-status";
@@ -553,9 +598,24 @@ form.addEventListener("submit", async e => {
     statusEl.textContent = "Please fill in all required fields with a valid email address.";
     statusEl.classList.add("err"); form.reportValidity(); return;
   }
+  if (form._honey.value) return;                       // bot filled the hidden field
+  if (Date.now() - captchaShownAt < 4000) {            // faster than a human can type
+    statusEl.textContent = "That was very fast. Please check the security code and try again.";
+    statusEl.classList.add("err"); return;
+  }
+  if (attempts >= 5) {
+    statusEl.textContent = "Too many incorrect attempts. Please reload the page and try again.";
+    statusEl.classList.add("err"); return;
+  }
+  if (capInput.value.trim().toUpperCase() !== captchaCode) {
+    attempts++;
+    statusEl.textContent = "The security code did not match. A new code has been shown; please try again.";
+    statusEl.classList.add("err"); newCaptcha(); capInput.focus(); return;
+  }
   const btn = form.querySelector(".btn-send");
   btn.disabled = true; btn.textContent = "Sending…";
   const data = Object.fromEntries(new FormData(form));
+  delete data._honey;
   data._subject = "Website message: " + data.purpose + " from " + data.name;
   data._template = "table";
   data._replyto = data.email;
@@ -567,7 +627,7 @@ form.addEventListener("submit", async e => {
     });
     const out = await res.json().catch(() => ({}));
     if (!res.ok || String(out.success) === "false") throw new Error(out.message || "failed");
-    form.reset();
+    form.reset(); newCaptcha(); attempts = 0;
     statusEl.textContent = "Thank you! Your message has been sent. I will reply as soon as possible.";
     statusEl.classList.add("ok");
   } catch (err) {
