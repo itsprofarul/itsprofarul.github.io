@@ -295,15 +295,51 @@
   <section id="contact" class="page">
     <h1 class="page-title">Contact</h1>
     <p class="page-sub">Open to research collaborations, editorial work, and speaking invitations.</p>
-    <div class="card">
-      <div class="contact-grid">
-        <div class="contact-item"><small>University Email</small><a href="mailto:arul.natarajan@siut.uz">arul.natarajan@siut.uz</a></div>
-        <div class="contact-item"><small>Personal Email</small><a href="mailto:itsprofarul@gmail.com">itsprofarul@gmail.com</a></div>
-        <div class="contact-item"><small>Affiliation</small>School of Computing, Samarkand International University of Technology, Samarkand, Uzbekistan</div>
-        <div class="contact-item"><small>Research Profiles</small>
-          <a href="https://scholar.google.com/citations?user=ejaQJu4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> ·
-          <a href="https://www.scopus.com/authid/detail.uri?authorId=55602548600" target="_blank" rel="noopener">Scopus</a> ·
-          <a href="https://orcid.org/0000-0002-9728-477X" target="_blank" rel="noopener">ORCID</a></div>
+    <div class="contact-layout">
+      <div class="card">
+        <h2 class="section">Send a Message</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <label>Full Name <span class="req">*</span>
+              <input type="text" name="name" required autocomplete="name"></label>
+            <label>Email Address <span class="req">*</span>
+              <input type="email" name="email" required autocomplete="email"></label>
+          </div>
+          <div class="form-row">
+            <label>Organization / University
+              <input type="text" name="organization" autocomplete="organization"></label>
+            <label>Purpose <span class="req">*</span>
+              <select name="purpose" required>
+                <option value="">Select…</option>
+                <option>Research Collaboration</option>
+                <option>Editorial / Book Project</option>
+                <option>Speaking Invitation</option>
+                <option>Student / Ph.D. Inquiry</option>
+                <option>Other</option>
+              </select></label>
+          </div>
+          <label>Message <span class="req">*</span>
+            <textarea name="message" rows="6" required></textarea></label>
+          <!-- spam trap: real visitors never see or fill this -->
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn-send">Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+      <div>
+        <div class="card">
+          <h2 class="section">Affiliation</h2>
+          <p style="margin:0">School of Computing<br>Samarkand International University of Technology<br>Samarkand, Uzbekistan</p>
+        </div>
+        <div class="card">
+          <h2 class="section">Research Profiles</h2>
+          <p style="margin:0">
+            <a href="https://scholar.google.com/citations?user=ejaQJu4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a><br>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=55602548600" target="_blank" rel="noopener">Scopus (ID: 55602548600)</a><br>
+            <a href="https://orcid.org/0000-0002-9728-477X" target="_blank" rel="noopener">ORCID (0000-0002-9728-477X)</a><br>
+            <a href="https://www.webofscience.com/wos/author/record/AAQ-7642-2021" target="_blank" rel="noopener">Web of Science</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -503,6 +539,44 @@ document.querySelectorAll("#pubTabs .tab").forEach(b => b.addEventListener("clic
   b.classList.add("active"); filter = b.dataset.filter; applyFilter();
 }));
 search.addEventListener("input", applyFilter);
+
+/* ---------- Contact form (FormSubmit) ----------
+   After activating, replace the email below with the
+   random code FormSubmit emails you, to hide your address. */
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/itsprofarul@gmail.com";
+const form = document.getElementById("contactForm");
+const statusEl = document.getElementById("formStatus");
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  statusEl.className = "form-status";
+  if (!form.checkValidity()) {
+    statusEl.textContent = "Please fill in all required fields with a valid email address.";
+    statusEl.classList.add("err"); form.reportValidity(); return;
+  }
+  const btn = form.querySelector(".btn-send");
+  btn.disabled = true; btn.textContent = "Sending…";
+  const data = Object.fromEntries(new FormData(form));
+  data._subject = "Website message: " + data.purpose + " from " + data.name;
+  data._template = "table";
+  data._replyto = data.email;
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify(data)
+    });
+    const out = await res.json().catch(() => ({}));
+    if (!res.ok || String(out.success) === "false") throw new Error(out.message || "failed");
+    form.reset();
+    statusEl.textContent = "Thank you! Your message has been sent. I will reply as soon as possible.";
+    statusEl.classList.add("ok");
+  } catch (err) {
+    statusEl.textContent = "Sorry, the message could not be sent. Please try again in a few minutes.";
+    statusEl.classList.add("err");
+  } finally {
+    btn.disabled = false; btn.textContent = "Send Message";
+  }
+});
 
 /* ---------- Menu navigation ---------- */
 const pages = [...document.querySelectorAll(".page")];
