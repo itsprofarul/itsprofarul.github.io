@@ -84,7 +84,7 @@
         </div>
         <div class="card">
           <h2 class="section">Latest</h2>
-          <div class="highlight"><b>Learning Kali Linux for Cybersecurity</b><small>New book on Amazon, September 2026</small></div>
+          <div class="highlight"><a href="https://itsprofarul.github.io/learning-kali-linux/"><b>Learning Kali Linux for Cybersecurity</b></a><small>New book on Amazon, September 2026 &middot; <a href="https://itsprofarul.github.io/learning-kali-linux/">Book website</a></small></div>
           <div class="highlight"><b>Secure Systems Design Award</b><small>ICCDM 2026, Universiti Putra Malaysia &amp; University of Delhi</small></div>
           <div class="highlight"><b>Hands-On Computer Networks &amp; AI-Driven Cybersecurity</b><small>Springer Nature, March 2026</small></div>
         </div>
@@ -437,7 +437,7 @@ const chapter = [
 ];
 
 const authored = [
-  {t:"Learning Kali Linux for Cybersecurity: A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking", m:"Amazon, September 2026", url:"https://www.amazon.com/dp/B0HK25TJMS", urlText:"View on Amazon"},
+  {t:"Learning Kali Linux for Cybersecurity: A Hands-on Beginner's Guide to Linux Commands, Networking, Security Tools, and Ethical Hacking", m:"Amazon, September 2026", url:"https://www.amazon.com/dp/B0HK25TJMS", urlText:"View on Amazon", url2:"https://itsprofarul.github.io/learning-kali-linux/", urlText2:"Book website"},
   {t:"Hands-On Computer Networks & AI-Driven Cybersecurity: A Comprehensive Student Guide", m:"Springer Nature, March 2026", doi:"10.1007/978-3-032-22035-6", idx:"scopus"},
   {t:"XXVII (CC) – Smart Device Programming", m:"Center for Distance Education, Bharathidasan University, 2017"}
 ];
@@ -503,6 +503,7 @@ function item(p) {
   h += '<span class="pm">' + (p.raw ? p.m : esc(p.m)) + '.';
   if (p.doi) h += ' DOI: <a href="https://doi.org/' + p.doi + '" target="_blank" rel="noopener">' + p.doi + '</a>';
   if (p.url) h += ' <a href="' + p.url + '" target="_blank" rel="noopener">' + p.urlText + '</a>';
+  if (p.url2) h += ' &middot; <a href="' + p.url2 + '">' + p.urlText2 + '</a>';
   h += '</span>';
   if (p.idx) { const t = TAGS[p.idx]; h += '<span class="tag ' + t[0] + '">' + t[1] + (p.q ? ", " + p.q : "") + '</span>'; }
   if (p.award) h += '<span class="tag award">&#127942; ' + esc(p.award) + '</span>';
